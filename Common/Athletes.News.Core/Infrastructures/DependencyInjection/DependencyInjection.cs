@@ -8,7 +8,7 @@ public static class DependencyInjection
 {
     public static void RegisterAllDependencies(this IServiceCollection services)
     {
-        var (scopedServices, transientServices, singletonServices) = GetInjectableServicesServices("Athletes411");
+        var (scopedServices, transientServices, singletonServices) = GetInjectableServicesServices("Athletes.News");
         foreach (var item in scopedServices)
         {
             var serviceType = AssemblyDetails.GetNamedInterface(item);

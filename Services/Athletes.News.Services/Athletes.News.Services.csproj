@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Athletes.News.Core\Athletes.News.Core.csproj" />
     <ProjectReference Include="..\..\Models\Athletes.News.Models\Athletes.News.Models.csproj" />
     <ProjectReference Include="..\..\Repositories\Athletes.News.Infrastructure\Athletes.News.Infrastructure.csproj" />
   </ItemGroup>

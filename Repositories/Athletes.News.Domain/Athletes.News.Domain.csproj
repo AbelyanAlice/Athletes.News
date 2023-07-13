@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Athletes.News.Core\Athletes.News.Core.csproj" />
+  </ItemGroup>
+
 </Project>

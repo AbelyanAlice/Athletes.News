@@ -1,4 +1,5 @@
 ﻿using Athletes.News.Domain.Entities;
+using Athletes.News.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
