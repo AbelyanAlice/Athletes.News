@@ -16,13 +16,11 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, long,
 
     public DbSet<CustomerUser>? CustomerUsers { get; set; }
 
-    public DbSet<RefreshToken> RefreshTokens { get; set; }
+    public DbSet<RefreshToken>? RefreshTokens { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
-        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-    }
+    public DbSet<DailyNews>? DailyNews { get; set; }
 
-   
+    public DbSet<Category>? Categories { get; set; }
+
+
 }

@@ -25,8 +25,4 @@
     <ProjectReference Include="..\Services\Athletes.News.Services\Athletes.News.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

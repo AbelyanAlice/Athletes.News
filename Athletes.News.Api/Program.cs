@@ -6,6 +6,7 @@ using Athletes.News.Api.Installer;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text.Json.Serialization;
 using Athletes.News.Infrastructure.Seed;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((ctx, lc) => lc
@@ -17,6 +18,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 {
 x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
+
+
 
 builder.Services.AddHttpClient();
 builder.Services.RegisterAllDependencies();
