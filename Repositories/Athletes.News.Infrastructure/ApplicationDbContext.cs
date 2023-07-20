@@ -9,7 +9,7 @@ namespace Athletes.News.Infrastructure;
 public class ApplicationDbContext : IdentityDbContext<User, Role, long,
     IdentityUserClaim<long>, UserRole, IdentityUserLogin<long>, IdentityRoleClaim<long>, IdentityUserToken<long>>
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options) 
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
 
     }
@@ -22,5 +22,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, long,
 
     public DbSet<Category>? Categories { get; set; }
 
+    public DbSet<Group>? Groups { get; set; }
 
+    public DbSet<Team>? Teams { get; set; }
 }

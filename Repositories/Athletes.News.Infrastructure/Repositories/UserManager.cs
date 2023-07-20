@@ -16,15 +16,15 @@ public sealed class UserManager : UserManager<User>, IUserManager
 {
     private readonly ILogger<UserManager> _logger;
     public UserManager(
-        IUserStore<User> store, 
-        IOptions<IdentityOptions> optionsAccessor, 
-        IPasswordHasher<User> passwordHasher, 
-        IEnumerable<IUserValidator<User>> userValidators, 
-        IEnumerable<IPasswordValidator<User>> passwordValidators, 
-        ILookupNormalizer keyNormalizer, 
-        IdentityErrorDescriber errors, 
-        IServiceProvider services, 
-        ILogger<UserManager> logger) 
+        IUserStore<User> store,
+        IOptions<IdentityOptions> optionsAccessor,
+        IPasswordHasher<User> passwordHasher,
+        IEnumerable<IUserValidator<User>> userValidators,
+        IEnumerable<IPasswordValidator<User>> passwordValidators,
+        ILookupNormalizer keyNormalizer,
+        IdentityErrorDescriber errors,
+        IServiceProvider services,
+        ILogger<UserManager> logger)
         : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
     {
         _logger = logger;
@@ -32,8 +32,7 @@ public sealed class UserManager : UserManager<User>, IUserManager
 
     public async Task<User> GetByEmailAsync(string email)
     {
-        return (await Users.Include(x => x.UserRoles)
-            .ThenInclude(x => x.Role)
+        return (await Users
             .Where(x => x.Email == email)
             .SingleOrDefaultAsync())!;
     }

@@ -14,7 +14,5 @@ public class User : IdentityUser<long>
     public DateTime Age { get; set; }
     public DateTime DateOfLastLogin { get; set; }
     public CustomerUser CustomerUser { get; set; } = null!;
-
-    public ICollection<UserRole> UserRoles { get; set; } = new HashSet<UserRole>();
     public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
 }

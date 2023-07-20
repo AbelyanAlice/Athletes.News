@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Athletes.News.Domain.Entities;
+using Athletes.News.Domain.IRepositories;
+using Athletes.News.Infrastructure.Repositories.Generic;
 
-namespace Athletes.News.Infrastructure.Repositories
+namespace Athletes.News.Infrastructure.Repositories;
+
+public class TeamRepository : BaseRepository<Team>, ITeamRepository
 {
-    internal class TeamRepository
+    public TeamRepository(ApplicationDbContext dbContext) : base(dbContext)
     {
     }
 }

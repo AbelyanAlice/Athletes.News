@@ -6,6 +6,6 @@ public class Group
     public string Name { get; set; } = null!;
     public long CategoryId { get; set; }
     public Category Category { get; set; } = null!;
-    public ICollection<Team> Team { get; set; } = new HashSet<Team>();
+    public ICollection<Team> Teams { get; set; } = new HashSet<Team>();
 
 }
