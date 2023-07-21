@@ -11,12 +11,23 @@ public class ApplicationMapping : Profile
     public ApplicationMapping()
     {
         CreateMap<DailyNewsDto, DailyNews>();
-        CreateMap<CategoryDto, Category>();
         CreateMap<DailyNews, DailyNewsResponse>();
-        CreateMap<Category, CategoryResponse>();
-        CreateMap<CategoryRequest, CategoryDto>();
         CreateMap<DailyNewsRequest, DailyNewsDto>();
         CreateMap<DailyNewsUpdateRequest, DailyNewsDto>();
         CreateMap<DailyNewsDto, DailyNewsResponse>();
+        CreateMap<DailyNewsDto, DailyNewsResponse>();
+
+        CreateMap<CategoryDto, Category>();
+        CreateMap<Category, CategoryResponse>();
+        CreateMap<CategoryRequest, CategoryDto>();
+
+        CreateMap<GroupDto, Group>();
+        CreateMap<Group, GroupResponse>();
+        CreateMap<GroupRequest, GroupDto>();
+
+        CreateMap<TeamDto, Team>();
+        CreateMap<Team, TeamResponse>();
+        CreateMap<TeamRequest, TeamDto>();
+
     }
 }
